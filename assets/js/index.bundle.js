@@ -1,4 +1,3 @@
-/*! For license information please see index.bundle.js.LICENSE.txt */
 (()=>{
     var e, t = {
         195: ()=>{}

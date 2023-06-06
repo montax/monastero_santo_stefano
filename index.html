@@ -61,12 +61,6 @@
           </li>
 
           <li class="nav-item dropdown dropdown-hover">
-            <a class="nav-link" href="#" id="navbarDropdown-3" aria-expanded="false" data-bs-auto-close="outside" style="font-size: 1.1em;">
-              Situazione attuale
-            </a>
-          </li>
-
-          <li class="nav-item dropdown dropdown-hover">
             <a class="nav-link" href="#posizione" id="navbarDropdown-4" aria-expanded="false" data-bs-auto-close="outside" style="font-size: 1.1em;">
               Posizione
             </a>
@@ -75,6 +69,12 @@
           <li class="nav-item dropdown dropdown-hover">
             <a class="nav-link" href="#mini-giochi" id="navbarDropdown-4" aria-expanded="false" data-bs-auto-close="outside" style="font-size: 1.1em;">
               Mini giochi
+            </a>
+          </li>
+
+          <li class="nav-item dropdown dropdown-hover">
+            <a class="nav-link" href="#" id="navbarDropdown-3" aria-expanded="false" data-bs-auto-close="outside" style="font-size: 1.1em;">
+              Progetto Arduino
             </a>
           </li>
 
@@ -112,7 +112,7 @@
       <div class="row">
         <div class="col-4" style="min-width: 250px;">
           <div class="carousel carousel-visible carousel-steps">
-            <div data-carousel='{"controls": true, "item" : 1, "nav": false, "loop" : false, "mouseDrag" : true, "gutter": 40}''>
+            <div data-carousel='{"controls": false, "item" : 1, "nav": false, "loop" : false, "mouseDrag" : true, "gutter": 40}''>
               <div>
                 <h4 class="fs-5">Studying</h4>
                 <p class="text-secondary fs-lg">Pariatur quia fugit porro autem numquam deserunt, minima aspernatur
@@ -263,7 +263,7 @@
                     </div>
                     <div class="col-lg-6 position-relative">
                       <div class="media equal equal-2-1">
-                        <span id="map1"></span>
+                        <span id="map1"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.876721250742!2d10.200781176388155!3d45.59302292483406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47817764fbe3444f%3A0x8d5e2f5e4e975ad6!2sEx%20Monastero%20di%20Santo%20Stefano!5e0!3m2!1sit!2sit!4v1686034322947!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
                       </div>
                     </div>
                   </div>
@@ -313,7 +313,7 @@
     <div class="container">
       <div class="row g-3 g-xl-5 mb-5">
         <div class="col-lg-6">
-          <h2>Mini giochi</h2>
+          <h2>Mini giochi del Monastero</h2>
         </div>
       </div>
       <div class="row g-3 g-xl-5">
@@ -321,7 +321,7 @@
           <a href="" class="card border card-arrow">
             <div class="card-header">
               <span class="badge bg-opaque-primary text-primary mb-3 rounded-pill">quiz</span>
-              <h3 class="card-title">Verifica le tue conoscenze sul Monastero, fai il quiz!</h3>
+              <h3 class="card-title">Verifica le tue conoscenze, fai il quiz!</h3>
             </div>
           </a>
         </div>
@@ -329,7 +329,7 @@
           <a href="" class="card border card-arrow">
             <div class="card-header">
               <span class="badge bg-opaque-primary text-primary mb-3 rounded-pill">puzzle</span>
-              <h3 class="card-title">Prova a fare il puzzle del monastero</h3>
+              <h3 class="card-title">Metti alla prova le tue abilità, prova a fare il puzzle!</h3>
             </div>
           </a>
         </div>
@@ -337,7 +337,7 @@
           <a href="" class="card border card-arrow">
             <div class="card-header">
               <span class="badge bg-opaque-primary text-primary mb-3 rounded-pill">riordino</span>
-              <h3 class="card-title">Testa la tua intelligenza, prova a riordinare le frasi</h3>
+              <h3 class="card-title">Testa la tua intelligenza, prova a riordinare le frasi!</h3>
             </div>
           </a>
         </div>
@@ -378,7 +378,7 @@
       var myOptions = {
         zoom: 14,
         center: latlng,
-        disableDefaultUI: true,
+        disableDefaultUI: false,
         styles: [
           {
             "elementType": "geometry",

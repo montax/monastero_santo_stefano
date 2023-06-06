@@ -20,7 +20,7 @@
     --bs-gray-dark: #555;
     --bs-black: #000;
     --bs-border-color: #ddd;
-    --bs-primary: #4726e1;
+    --bs-primary: rgb(65, 80, 40);
     --bs-secondary: #555;
     --bs-success: #1d4b40;
     --bs-info: #0dcaf0;
@@ -8793,7 +8793,7 @@ textarea.form-control-lg {
 }
 
 .bg-opaque-primary {
-    background-color: rgba(71,38,225,0.1) !important
+    background-color: rgba(65,80,40,0.2) !important
 }
 
 .bg-opaque-light {
@@ -8805,7 +8805,7 @@ textarea.form-control-lg {
 }
 
 .text-primary {
-    color: #4726e1 !important
+    color: rgb(65,80,40) !important
 }
 
 .text-primary-hover:hover {
@@ -17547,7 +17547,8 @@ figure {
 }
 
 .card:hover {
-    z-index: 4
+    z-index: 4;
+    color: rgb(65, 80, 40)
 }
 
 .card-arrow .card-header,.card-arrow .card-footer,.card-arrow .card-body {
@@ -17579,7 +17580,8 @@ figure {
 
 .card-arrow:not(.card-hover-arrow):hover::after {
     right: 2rem;
-    bottom: 2rem
+    bottom: 2rem;
+    color: rgb(65, 80, 40)
 }
 
 .card-hover-reveal {

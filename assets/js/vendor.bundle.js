@@ -2896,7 +2896,7 @@
                 }
                 )),
                 this.setTransitioning(!0);
-                const s = `scroll ${n[0].toUpperCase() + n.slice(1)}`;
+                const s = `scroll${n[0].toUpperCase() + n.slice(1)}`;
                 this._queueCallback((()=>{
                     this._element.classList.remove(qe),
                     this._element.classList.add($e, Be),
@@ -8861,7 +8861,7 @@
             function Rt(t=0, e=!1, i=!1) {
                 if (!O(t))
                     return Rt(void 0, e, i);
-                const n = t=>`0 ${t}`.slice(-2);
+                const n = t=>`0${t}`.slice(-2);
                 let s = zt(t);
                 const o = (r = t,
                 Math.trunc(r / 60 % 60, 10));
@@ -10222,7 +10222,7 @@
                     }
                     )),
                     t(this, "enter", (()=>{
-                        this.enabled && (V.isIos && this.player.config.fullscreen.iosNative ? this.player.isVimeo ? this.player.embed.requestFullscreen() : this.target.webkitEnterFullscreen() : !Gt.native || this.forceFallback ? this.toggleFallback(!0) : this.prefix ? $(this.prefix) || this.target[`${this.prefix}Request ${this.property}`]() : this.target.requestFullscreen({
+                        this.enabled && (V.isIos && this.player.config.fullscreen.iosNative ? this.player.isVimeo ? this.player.embed.requestFullscreen() : this.target.webkitEnterFullscreen() : !Gt.native || this.forceFallback ? this.toggleFallback(!0) : this.prefix ? $(this.prefix) || this.target[`${this.prefix}Request${this.property}`]() : this.target.requestFullscreen({
                             navigationUI: "hide"
                         }))
                     }
@@ -11582,7 +11582,7 @@
                           , i = t.getAd()
                           , n = t.getAdData();
                         switch ((t=>{
-                            gt.call(this.player, this.player.media, `ads ${t.replace(/_/g, "").toLowerCase()}`)
+                            gt.call(this.player, this.player.media, `ads${t.replace(/_/g, "").toLowerCase()}`)
                         }
                         )(t.type),
                         t.type) {
