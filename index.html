@@ -11,13 +11,6 @@
   
       gtag('config', 'G-6YWB4ECCWW');
   </script>
-
-  <script>
-    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-      key: "YOUR_API_KEY_HERE",
-      v: "weekly",
-    });
-  </script>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,8 +28,6 @@
   <title>Monastero di Santo Stefano</title></head>
 
 <body>
-
-
   <!-- navbar -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-sticky navbar-dark">
     <div class="container">
@@ -108,8 +99,77 @@
     <span class="scroll-down"></span>
   </section>
 
+    <!-- galleria immagini -->
+    <section class="overflow-hidden" data-aos="fade-left" style="overflow: hidden; margin-top: 150px;" id="immagini">
+      <div class="container gallery-1">
+        <div class="row flex-nowrap align-items-end g-2 g-xl-5 mb-xl-5 mb-xl-5" data-bottom-top="transform: translateX(-25%)" data-top-bottom="transform: translateX(-40%)">
+          <div class="col-6">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-1.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-1.jpg')">
+              </span>
+            </figure>        
+          </div>
+          <div class="col-6">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-2.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-2.jpg')">
+              </span>
+            </figure>        
+          </div>
+          <div class="col-6">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-3.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-3.jpg')">
+              </span>
+            </figure>        
+          </div>
+          <div class="col-6">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-4.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-4.jpg')">
+              </span>
+            </figure>        
+          </div>
+        </div>
+        <div class="row flex-nowrap align-items-start g-2 g-xl-5" data-bottom-top="transform: translateX(-50%)" data-top-bottom="transform: translateX(-35%)">
+          <div class="col-4">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-4.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-4.jpg')">
+              </span>
+            </figure>        </div>
+          <div class="col-4">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-5.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-5.jpg')">
+              </span>
+            </figure>        </div>
+          <div class="col-4">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-6.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-6.jpg')">
+              </span>
+            </figure>        </div>
+          <div class="col-4">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-7.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-7.jpg')">
+              </span>
+            </figure>        </div>
+          <div class="col-4">
+            <figure class="media equal equal-16-10 media-image" 
+              data-bp='{"imgSrc": "./assets/images/coworking-8.jpg" , "parentGalleryClass": "gallery-1" }' >
+              <span  style="background-image: url('./assets/images/coworking-8.jpg')">
+              </span>
+            </figure>        </div>
+        </div>
+      </div>
+    </section>
+  
+
   <!-- storia - timeline -->
-  <section class="py-10 py-xl-15" data-aos="fade-up" style="overflow: hidden;" id="storia">
+  <section class="py-10 py-xl-15 " data-aos="fade-up" id="storia" style="overflow-x: hidden;">
     <div class="container">
       <div class="row mb-10">
         <div class="col-8">
@@ -153,7 +213,7 @@
   </section>
 
   <!-- storia - scritto -->
-  <section class="py-15 py-xl-20 overflow-hidden" style="margin-top: -150px; overflow-y: hidden;">
+  <section class="py-15 py-xl-20 overflow-hidden" style="margin-top: -150px; overflow-x: hidden;">
     <div class="container">
       <div class="row justify-content-center position-relative">
         <div class="col-xl-10">
@@ -175,73 +235,6 @@
     </div>
   </section>
 
-  <!-- galleria immagini -->
-  <section class="overflow-hidden" data-aos="fade-left" style="overflow: hidden;" id="immagini">
-    <div class="container gallery-1">
-      <div class="row flex-nowrap align-items-end g-2 g-xl-5 mb-xl-5 mb-xl-5" data-bottom-top="transform: translateX(-25%)" data-top-bottom="transform: translateX(-40%)">
-        <div class="col-6">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-1.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-1.jpg')">
-            </span>
-          </figure>        
-        </div>
-        <div class="col-6">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-2.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-2.jpg')">
-            </span>
-          </figure>        
-        </div>
-        <div class="col-6">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-3.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-3.jpg')">
-            </span>
-          </figure>        
-        </div>
-        <div class="col-6">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-4.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-4.jpg')">
-            </span>
-          </figure>        
-        </div>
-      </div>
-      <div class="row flex-nowrap align-items-start g-2 g-xl-5" data-bottom-top="transform: translateX(-50%)" data-top-bottom="transform: translateX(-35%)">
-        <div class="col-4">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-4.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-4.jpg')">
-            </span>
-          </figure>        </div>
-        <div class="col-4">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-5.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-5.jpg')">
-            </span>
-          </figure>        </div>
-        <div class="col-4">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-6.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-6.jpg')">
-            </span>
-          </figure>        </div>
-        <div class="col-4">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-7.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-7.jpg')">
-            </span>
-          </figure>        </div>
-        <div class="col-4">
-          <figure class="media equal equal-16-10 media-image" 
-            data-bp='{"imgSrc": "./assets/images/coworking-8.jpg" , "parentGalleryClass": "gallery-1" }' >
-            <span  style="background-image: url('./assets/images/coworking-8.jpg')">
-            </span>
-          </figure>        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- posizione -->
   <section class="py-15 py-xl-20 bg-black inverted" style="margin-top: 100px;" id="posizione">
