@@ -1,9 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap); /*!
- * Bootstrap v5.0.2 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap);
 :root {
     --bs-blue: #4726e1;
     --bs-indigo: #6610f2;
@@ -33,18 +28,54 @@
     --bs-gradient: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0))
 }
 
-*,*::before,*::after {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    overflow-x: hidden;
-}
-
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth
+    }
+}
+
+/* Modifiche base */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+#immagini {
+    overflow: hidden; 
+    margin-top: 100px;
+}
+
+#storia {
+    overflow-x: hidden;
+    margin-top: -25px; 
+}
+
+#testo_storia {
+    margin-top: -200px; 
+    overflow-x: hidden;
+}
+
+#posizione {
+    margin-top: -50px; 
+}
+
+@media (max-width: 1200px) {
+    #carosello1 {
+        margin-bottom: 15px;
+    }
+
+    .col-4 {
+        min-width: 150px;
+    }
+
+    .col-6 {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    #immagini {
+        margin-top: 50px;
     }
 }
 
@@ -57,8 +88,13 @@ body {
     color: #000;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow-x: hidden
 }
+
+
+
+
 
 hr {
     margin: 1rem 0;
