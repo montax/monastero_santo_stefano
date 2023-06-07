@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <title>Monastero Santo Stefano - Arduino</title>
+  <meta name="description" content="Sito web realizzato dalla classe 3ªC dell'ITIS Beretta per il progetto di PCTO con lo scopo di ridare vita al Monastero Santo Stefano di Collebeato.">
+  <meta name="keywords" content="monaci, monastero, collebeato, monastero di santo stefano, monastero di santo stefano di collebeato, montagna, passeggiata, brescia-bergamo 2023, capitale della cultura, via delle sorelle, arduino, tech">
+  <meta name="author" content="Not a Design Company">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+  <link rel="stylesheet" href="./assets/css/index.bundle.css" />
+</head>
+
+<body class="bg-light">
+  <!-- navbar -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-sticky navbar-light bg-light border-bottom">
+    <div class="container">
+      <a href="./index.html" class="navbar-brand"><img src="./assets/images/logo/Logo_Monastero_Santo_Stefano.png" alt="Logo"></a>
+  
+      <!-- secondary -->
+      <ul class="navbar-nav navbar-nav-secondary order-lg-3">
+        <li class="nav-item d-lg-none">
+          <a class="nav-link nav-icon" href="" role="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-list"></span>
+          </a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a href="https://www.instagram.com/monastero_santo.stefano/" class="btn ms-2">
+            <img src="./assets/images/logo/instagram.png" alt="Instagram logo">
+          </a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a href="https://www.youtube.com/@MonasteroSantoStefano/featured" class="btn ms-2">
+            <img src="./assets/images/logo/youtube.png" alt="YouTube logo">
+          </a>
+        </li>
+      </ul>
+  
+      <!-- primary -->
+      <div class="collapse navbar-collapse" id="navbar" data-bs-parent="#mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown dropdown-hover">
+            <a class="nav-link" href="https://monastero-santo-stefano.netlify.app/#storia" id="navbarDropdown" role="button" aria-expanded="false">
+              Storia
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-hover">
+            <a class="nav-link" href="https://monastero-santo-stefano.netlify.app/#posizione" id="navbarDropdown" role="button"
+              aria-expanded="false">
+              Posizione
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-hover">
+            <a class="nav-link" href="https://monastero-santo-stefano.netlify.app/#mini-giochi" id="navbarDropdown" role="button" aria-expanded="false" data-bs-auto-close="outside">
+              Mini giochi
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-hover">
+            <a class="nav-link" href="arduino.html" id="navbarDropdown" role="button" aria-expanded="false">
+              Progetto Arduino
+            </a>
+          </li>
+          <li class="nav-item d-lg-none btn ms-2">
+            <a href="https://www.instagram.com/monastero_santo.stefano/" class="nav-link text-primary"><img src="./assets/images/logo/instagram.png" alt="Instagram logo"></a>
+          </li>
+
+          <li class="nav-item d-lg-none btn ms-2">
+            <a href="https://www.youtube.com/@MonasteroSantoStefano/featured" class="nav-link text-primary"><img src="./assets/images/logo/youtube.png" alt="YouTube logo"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- content -->
+  <div class="offcanvas-wrap">
+    <section class="split">
+      <div class="container">
+        <div class="row justify-content-between">
+ 
+          <div class="col-lg-3 split-sidebar">
+            <!-- table of contents-->
+            <div class="sticky-top">
+              <div class="toc-container">
+                <ul id="toc-nav" class="nav nav-minimal flex-column d-none d-lg-block">
+                  <li class="nav-item">
+                    <figure class="btn menu-2 nav-link fs-lg" data-bp='{"ytSrc": "F1Ls18Cvik4"}'>Guarda il documentario</figure>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fs-lg" href="./assets/pdf/Rilevazioni Arduino.pdf" role="button" aria-controls="menu-2">Rilevazioni</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fs-lg" href="#menu-2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="menu-2">Componenti</a>
+                    <div class="collapse " id="menu-2" data-bs-parent="#toc-nav">
+                      <ul class="nav nav-minimal flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.amazon.it/Freenove-Display-Compatible-Arduino-Raspberry/dp/B0B76YGDV4/ref=sr_1_5?crid=3P6KJJ6XKE8SZ&keywords=display+lcd+i2c&qid=1686129425&sprefix=Display+LCD,aps,95&sr=8-5">Display LCD</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.amazon.it/AZDelivery-Sensore-temperatura-umidit%C3%A0-Raspberry/dp/B07TYPT2NJ/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3PN66IATUQIR8&keywords=Sensore+DHT11&qid=1686129451&sprefix=sensore+dht11,aps,94&sr=8-5">Sensore DHT11</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.amazon.it/DSD-TECH-BT-06-wireless-Bluetooth/dp/B09NKV8MY2/ref=sr_1_3?crid=26FX9XBWH8E2S&keywords=modulo+bluetooth+hc-06&qid=1686129473&sprefix=Modulo+HC-06,aps,81&sr=8-3">Modulo HC-06</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.amazon.it/Arduino-Uno-Rev3-Scheda-microcontrollore/dp/B008GRTSV6/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=272E5YU59C92M&keywords=Arduino+UNO&qid=1686129494&sprefix=arduino+uno,aps,86&sr=8-5">Arduino UNO</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.amazon.it/Intrecciato-Caricabatterie-Ricarica-Samsung-OnePlus/dp/B088N8KXD4/ref=sr_1_8?crid=2O27J5BNSRM0M&keywords=cavo+usb+type-c&qid=1686129515&sprefix=cavo+usb,aps,105&sr=8-8">Cavo USB-C</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.amazon.it/Resistori-Pellicola-Tolleranza-Limitazione-Certificati/dp/B08QRJZ82J/ref=sr_1_6?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3NOXUQ7FA7URA&keywords=Resistenza+10k%CE%A9&qid=1686129544&sprefix=resistenza+10k%CF%89,aps,93&sr=8-6">Resistenza 10kΩ</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link">Contenitore</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>          
+          </div>
+
+          <!-- content -->
+          <div class="col-lg-9 split-content">
+
+            <!-- text -->
+            <section class="pb-5 border-bottom">
+              <h3>Obiettivo:</h3>
+              <p class="lead text-secondary">Questo progetto svolge il compito di rilevare due fattori ambientali: temperatura ed umidità. Misurazioni che verranno svolte lungo il tragitto, a partire dal monastero Santo Stefano di Collebeato alla stella di Gussago, ovvero la Via delle Sorelle.</p>
+            </section>
+
+            <!-- component with code -->
+            <section class="pb-5 border-bottom">
+              <h3>Codice:</h3>
+              <div class="card bg-opaque-white">
+                <div class="card-body bg-white">
+                  <ul class="avatar-list">
+                    <li>
+                      <span class="avatar avatar-lg rounded-circle bg-primary">
+                        <span>.ino</span>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="avatar avatar-lg">
+                        <img src="./assets/images/Arduino IDE.png" class="rounded-circle" alt="Avatar">
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <script type="text/plain" class="language-js">
+                    #include "DHT.h"
+                    #include <LiquidCrystal_I2C.h>
+                    #define DHTPIN 2
+                    #define DHTTYPE DHT11
+
+                    DHT dht(DHTPIN, DHTTYPE);
+                    LiquidCrystal_I2C lcd(0x3F, 16, 2);
+
+                    void setup() {
+                      Serial.begin(9600);
+                      Serial.println(F("DHTxx test!"));
+                      dht.begin();
+                      lcd.init();
+                      lcd.backlight();
+                    }
+                    
+                    void loop() {
+                      float t = dht.readTemperature();
+                      float h = dht.readHumidity();
+                      lcd.print("Temp: ");
+                      lcd.print(t);
+                      lcd.print(" *C");
+                      Serial.print("Temperatura: ");
+                      Serial.print(t);
+                      Serial.println(" *C");
+                      lcd.setCursor(0, 1);
+                      lcd.print("Umidita: ");
+                      lcd.print(h);
+                      lcd.print(" %");
+                      Serial.print("Umidita: ");
+                      Serial.print(h);
+                      Serial.println(" %");
+                      delay(7000);
+                    }
+                  </script>
+                </div>
+              </div>
+            </section>
+
+            <section class="pb-5">
+              <h3>Schema elettrico:</h3>
+              <img src="assets/images/Schema elettrico.png" alt="schema elettrico Arduino" id="schema_elettrico" class="col-12">
+            </section>
+
+            <section class="pb-5 border-bottom">
+              <h3>Montaggio passo-passo:</h3>
+              <section class="py-10 py-xl-15" data-aos="fade-up" id="storia">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-4" style="min-width: 300px;">
+                      <div class="carousel carousel-visible carousel-steps">
+                        <div data-carousel='{"controls": false, "item" : 1, "nav": false, "loop" : false, "mouseDrag" : true, "gutter": 40}'>
+                          <div>
+                            <p class="text-secondary fs-lg">Collegare il sensore DHT11 alla breadboard, con i vari cavi Jumper, utilizzati per il collegamento ad Arduino UNO, e resistenza da 10kΩ.</p>
+                          </div>
+                          <div>
+                            <p class="text-secondary fs-lg">Connettere i pin analogici di Arduino al display LCD, che mostrerà le misurazioni di temperatura ed umidità.</p>
+                          </div>
+                          <div>
+                            <p class="text-secondary fs-lg">Integrare nel progetto un modulo HC-06, con cavi Jumper maschio-femmina, per trasmettere i dati rilevati dal sensore al dispositivo collegato via Bluetooth.</p>
+                          </div>
+                          <div>
+                            <p class="text-secondary fs-lg">Infine alimentare il tutto con un powerbank.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+
+            <section class="pb-5">
+              <h3>Circuito reale:</h3>
+              <img src="assets/images/Circuito reale 1.jpg" alt="schema elettrico Arduino" id="Circuito" class="col-12">
+              <div style="display: flex;">
+                <img src="assets/images/Circuito reale 2.jpg" alt="schema elettrico Arduino" id="Circuito" class="col-6">
+                <img src="assets/images/Circuito reale 3.jpg" alt="schema elettrico Arduino" id="Circuito" class="col-6">
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- table of contents - mobile-->
+  <div class="position-fixed bottom-0 end-0 p-2 level-1">
+    <button class="btn btn-white btn-icon d-lg-none rounded-pill shadow" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <i class="bi bi-justify-right fs-4"></i>
+    </button>
+  </div>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav nav-minimal flex-column" id="toc-mob-nav">
+        <li class="nav-item">
+          <figure class="btn menu-2 nav-link fs-lg" data-bp='{"ytSrc": "F1Ls18Cvik4"}'>Guarda il documentario</figure>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-lg" href="./assets/pdf/Rilevazioni Arduino.pdf" role="button" aria-controls="menu-2">Rilevazioni</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-lg" href="#menu-2" data-bs-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="menu-2">Componenti:</a>
+          <div class="collapse " id="menu-2" data-bs-parent="#toc-nav">
+            <ul class="nav nav-minimal flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.amazon.it/Freenove-Display-Compatible-Arduino-Raspberry/dp/B0B76YGDV4/ref=sr_1_5?crid=3P6KJJ6XKE8SZ&keywords=display+lcd+i2c&qid=1686129425&sprefix=Display+LCD,aps,95&sr=8-5">Display LCD</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.amazon.it/AZDelivery-Sensore-temperatura-umidit%C3%A0-Raspberry/dp/B07TYPT2NJ/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3PN66IATUQIR8&keywords=Sensore+DHT11&qid=1686129451&sprefix=sensore+dht11,aps,94&sr=8-5">Sensore DHT11</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.amazon.it/DSD-TECH-BT-06-wireless-Bluetooth/dp/B09NKV8MY2/ref=sr_1_3?crid=26FX9XBWH8E2S&keywords=modulo+bluetooth+hc-06&qid=1686129473&sprefix=Modulo+HC-06,aps,81&sr=8-3">Modulo HC-06</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.amazon.it/Arduino-Uno-Rev3-Scheda-microcontrollore/dp/B008GRTSV6/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=272E5YU59C92M&keywords=Arduino+UNO&qid=1686129494&sprefix=arduino+uno,aps,86&sr=8-5">Arduino UNO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.amazon.it/Intrecciato-Caricabatterie-Ricarica-Samsung-OnePlus/dp/B088N8KXD4/ref=sr_1_8?crid=2O27J5BNSRM0M&keywords=cavo+usb+type-c&qid=1686129515&sprefix=cavo+usb,aps,105&sr=8-8">Cavo USB-C</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.amazon.it/Resistori-Pellicola-Tolleranza-Limitazione-Certificati/dp/B08QRJZ82J/ref=sr_1_6?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3NOXUQ7FA7URA&keywords=Resistenza+10k%CE%A9&qid=1686129544&sprefix=resistenza+10k%CF%89,aps,93&sr=8-6">Resistenza 10kΩ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Contenitore</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- javascript -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+  <script src="./assets/js/index.bundle.js"></script></body>
+
+</html>

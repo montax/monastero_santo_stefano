@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap);
 :root {
-    --bs-blue: #4726e1;
-    --bs-indigo: #6610f2;
-    --bs-purple: #300d81;
+    --bs-blue: #678439;
+    --bs-indigo: #678439;
+    --bs-purple: #678439;
     --bs-pink: #d63384;
     --bs-red: #d34f2d;
     --bs-orange: #f08d34;
@@ -15,7 +15,7 @@
     --bs-gray-dark: #555;
     --bs-black: #000;
     --bs-border-color: #ddd;
-    --bs-primary: rgb(65, 80, 40);
+    --bs-primary: #678439;
     --bs-secondary: #555;
     --bs-success: #1d4b40;
     --bs-info: #0dcaf0;
@@ -59,16 +59,29 @@
     margin-top: -50px; 
 }
 
+#navbarDropdown {
+    font-size: 1.1em;
+}
+
+.nav-item {
+    color: rgb(29,29,29);
+}
+
+.nav-item:hover,
+.nav-link:hover {
+    color: #678439;
+}
+
 @media (max-width: 1200px) {
     #carosello1 {
         margin-bottom: 15px;
     }
 
-    .col-4 {
+    #immagini .col-4 {
         min-width: 150px;
     }
 
-    .col-6 {
+    #immagini .col-6 {
         min-width: 200px;
     }
 }
@@ -243,7 +256,7 @@ sup {
 }
 
 a {
-    color: #4726e1;
+    color: #678439;
     text-decoration: none
 }
 
@@ -2809,8 +2822,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .form-check-input:checked[type="checkbox"] {
@@ -2822,8 +2835,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input[type="checkbox"]:indeterminate {
-    background-color: #4726e1;
-    border-color: #4726e1;
+    background-color: #678439;
+    border-color: #678439;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e")
 }
 
@@ -2911,7 +2924,7 @@ textarea.form-control-lg {
     width: 1rem;
     height: 1rem;
     margin-top: -.25rem;
-    background-color: #4726e1;
+    background-color: #678439;
     border: 0;
     -webkit-transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
@@ -2942,7 +2955,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #4726e1;
+    background-color: #678439;
     border: 0;
     -moz-transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
@@ -3348,8 +3361,8 @@ textarea.form-control-lg {
 
 .btn-primary {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-primary:hover {
@@ -3377,8 +3390,8 @@ textarea.form-control-lg {
 
 .btn-primary:disabled,.btn-primary.disabled {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-secondary {
@@ -3627,14 +3640,14 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-    color: #4726e1;
-    border-color: #4726e1
+    color: #678439;
+    border-color: #678439
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:focus+.btn-outline-primary,.btn-outline-primary:focus {
@@ -3643,8 +3656,8 @@ textarea.form-control-lg {
 
 .btn-check:checked+.btn-outline-primary,.btn-check:active+.btn-outline-primary,.btn-outline-primary:active,.btn-outline-primary.active,.btn-outline-primary.dropdown-toggle.show {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:checked+.btn-outline-primary:focus,.btn-check:active+.btn-outline-primary:focus,.btn-outline-primary:active:focus,.btn-outline-primary.active:focus,.btn-outline-primary.dropdown-toggle.show:focus {
@@ -3652,7 +3665,7 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary:disabled,.btn-outline-primary.disabled {
-    color: #4726e1;
+    color: #678439;
     background-color: transparent
 }
 
@@ -3868,7 +3881,7 @@ textarea.form-control-lg {
 
 .btn-link {
     font-weight: 400;
-    color: #4726e1;
+    color: #678439;
     text-decoration: none
 }
 
@@ -4199,7 +4212,7 @@ textarea.form-control-lg {
 .dropdown-item.active,.dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #4726e1
+    background-color: #678439
 }
 
 .dropdown-item.disabled,.dropdown-item:disabled {
@@ -4244,7 +4257,7 @@ textarea.form-control-lg {
 
 .dropdown-menu-dark .dropdown-item.active,.dropdown-menu-dark .dropdown-item:active {
     color: #fff;
-    background-color: #4726e1
+    background-color: #678439
 }
 
 .dropdown-menu-dark .dropdown-item.disabled,.dropdown-menu-dark .dropdown-item:disabled {
@@ -4340,7 +4353,7 @@ textarea.form-control-lg {
 .nav-link {
     display: block;
     padding: .5rem 1rem;
-    color: #4726e1;
+    color: #678439;
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out
 }
 
@@ -4398,7 +4411,7 @@ textarea.form-control-lg {
 
 .nav-pills .nav-link.active,.nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #4726e1
+    background-color: #678439
 }
 
 .nav-fill>.nav-link,.nav-fill .nav-item {
@@ -5045,7 +5058,7 @@ textarea.form-control-lg {
 .page-link {
     position: relative;
     display: block;
-    color: #4726e1;
+    color: #678439;
     background-color: rgba(0,0,0,0);
     border: 0 solid #bbb;
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
@@ -5079,8 +5092,8 @@ textarea.form-control-lg {
 .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .page-item.disabled .page-link {
@@ -5155,7 +5168,7 @@ textarea.form-control-lg {
 .alert-primary {
     color: #2b1787;
     background-color: #dad4f9;
-    border-color: #4726e1
+    border-color: #678439
 }
 
 .alert-primary .alert-link {
@@ -5260,7 +5273,7 @@ textarea.form-control-lg {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #4726e1;
+    background-color: #678439;
     transition: width 0.6s ease
 }
 
@@ -5340,8 +5353,8 @@ textarea.form-control-lg {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .list-group-item+.list-group-item {
@@ -6569,7 +6582,7 @@ textarea.form-control-lg {
 }
 
 .link-primary {
-    color: #4726e1
+    color: #678439
 }
 
 .link-primary:hover,.link-primary:focus {
@@ -7146,7 +7159,7 @@ textarea.form-control-lg {
 }
 
 .border-primary {
-    border-color: #4726e1 !important
+    border-color: #678439 !important
 }
 
 .border-secondary {
@@ -8477,7 +8490,7 @@ textarea.form-control-lg {
 }
 
 .text-primary {
-    color: #4726e1 !important
+    color: #678439 !important
 }
 
 .text-secondary {
@@ -8533,15 +8546,15 @@ textarea.form-control-lg {
 }
 
 .text-blue {
-    color: #4726e1 !important
+    color: #678439 !important
 }
 
 .text-indigo {
-    color: #6610f2 !important
+    color: #678439 !important
 }
 
 .text-purple {
-    color: #300d81 !important
+    color: #678439 !important
 }
 
 .text-pink {
@@ -8561,7 +8574,7 @@ textarea.form-control-lg {
 }
 
 .text-green {
-    color: #1d4b40 !important
+    color: #678439 !important
 }
 
 .text-teal {
@@ -8585,7 +8598,7 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-    background-color: #4726e1 !important
+    background-color: #678439 !important
 }
 
 .bg-secondary {
@@ -8629,15 +8642,15 @@ textarea.form-control-lg {
 }
 
 .bg-blue {
-    background-color: #4726e1 !important
+    background-color: #678439 !important
 }
 
 .bg-indigo {
-    background-color: #6610f2 !important
+    background-color: #678439 !important
 }
 
 .bg-purple {
-    background-color: #300d81 !important
+    background-color: #678439 !important
 }
 
 .bg-pink {
@@ -8845,7 +8858,7 @@ textarea.form-control-lg {
 }
 
 .text-primary-hover:hover {
-    color: #4726e1 !important
+    color: #678439 !important
 }
 
 .text-secondary {
@@ -8905,27 +8918,27 @@ textarea.form-control-lg {
 }
 
 .text-blue {
-    color: #4726e1 !important
+    color: #678439 !important
 }
 
 .text-blue-hover:hover {
-    color: #4726e1 !important
+    color: #678439 !important
 }
 
 .text-indigo {
-    color: #6610f2 !important
+    color: #678439 !important
 }
 
 .text-indigo-hover:hover {
-    color: #6610f2 !important
+    color: #678439 !important
 }
 
 .text-purple {
-    color: #300d81 !important
+    color: #678439 !important
 }
 
 .text-purple-hover:hover {
-    color: #300d81 !important
+    color: #678439 !important
 }
 
 .text-pink {
@@ -9025,11 +9038,11 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-    background-color: #4726e1 !important
+    background-color: #678439 !important
 }
 
 .bg-primary-hover:hover {
-    background-color: #4726e1 !important
+    background-color: #678439 !important
 }
 
 .bg-secondary {
@@ -9089,27 +9102,27 @@ textarea.form-control-lg {
 }
 
 .bg-blue {
-    background-color: #4726e1 !important
+    background-color: #678439 !important
 }
 
 .bg-blue-hover:hover {
-    background-color: #4726e1 !important
+    background-color: #678439 !important
 }
 
 .bg-indigo {
-    background-color: #6610f2 !important
+    background-color: #678439 !important
 }
 
 .bg-indigo-hover:hover {
-    background-color: #6610f2 !important
+    background-color: #678439 !important
 }
 
 .bg-purple {
-    background-color: #300d81 !important
+    background-color: #678439 !important
 }
 
 .bg-purple-hover:hover {
-    background-color: #300d81 !important
+    background-color: #678439 !important
 }
 
 .bg-pink {
@@ -16249,7 +16262,7 @@ hr.or::before {
 
 .inverted .progress .progress-bar {
     background: #fff;
-    color: #4726e1;
+    color: #678439;
     font-weight: 500
 }
 
@@ -16481,7 +16494,7 @@ hr.or::before {
 }
 
 .dropdown-menu .dropdown-item.active {
-    color: #4726e1;
+    color: #678439;
     background: transparent
 }
 
@@ -16681,7 +16694,7 @@ hr.or::before {
 }
 
 .form-check-minimal .form-check-label:hover {
-    color: #4726e1
+    color: #678439
 }
 
 .form-check-color {
@@ -16731,7 +16744,7 @@ hr.or::before {
 }
 
 .form-check-color .form-check-label:hover {
-    color: #4726e1
+    color: #678439
 }
 
 .form-check-color .form-check-label span {
@@ -16909,11 +16922,11 @@ hr.or::before {
 }
 
 .nav-minimal .nav-link[class*="active"] {
-    color: #4726e1 !important
+    color: #678439 !important
 }
 
 .nav-minimal .nav-link:hover {
-    color: #4726e1 !important
+    color: #678439 !important
 }
 
 .nav-minimal .nav-minimal {
@@ -16987,7 +17000,7 @@ hr.or::before {
 }
 
 .carousel[class*="-big-controls"] .tns-controls button:hover {
-    background: #4726e1
+    background: #678439
 }
 
 .carousel[class*="-big-controls"] .tns-controls button:active {
@@ -17665,7 +17678,7 @@ figure {
 }
 
 .card-hover-gradient:hover {
-    background-color: #4726e1
+    background-color: #678439
 }
 
 .card-hover-rise:hover {
@@ -17992,8 +18005,8 @@ figure {
 
 .btn-blue {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-blue:hover {
@@ -18021,14 +18034,14 @@ figure {
 
 .btn-blue:disabled,.btn-blue.disabled {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-indigo {
     color: #fff;
-    background-color: #6610f2;
-    border-color: #6610f2
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-indigo:hover {
@@ -18056,14 +18069,14 @@ figure {
 
 .btn-indigo:disabled,.btn-indigo.disabled {
     color: #fff;
-    background-color: #6610f2;
-    border-color: #6610f2
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-purple {
     color: #fff;
-    background-color: #300d81;
-    border-color: #300d81
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-purple:hover {
@@ -18091,8 +18104,8 @@ figure {
 
 .btn-purple:disabled,.btn-purple.disabled {
     color: #fff;
-    background-color: #300d81;
-    border-color: #300d81
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-pink {
@@ -18516,14 +18529,14 @@ figure {
 }
 
 .btn-outline-blue {
-    color: #4726e1;
-    border-color: #4726e1
+    color: #678439;
+    border-color: #678439
 }
 
 .btn-outline-blue:hover {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:focus+.btn-outline-blue,.btn-outline-blue:focus {
@@ -18532,8 +18545,8 @@ figure {
 
 .btn-check:checked+.btn-outline-blue,.btn-check:active+.btn-outline-blue,.btn-outline-blue:active,.btn-outline-blue.active,.btn-outline-blue.dropdown-toggle.show {
     color: #fff;
-    background-color: #4726e1;
-    border-color: #4726e1
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:checked+.btn-outline-blue:focus,.btn-check:active+.btn-outline-blue:focus,.btn-outline-blue:active:focus,.btn-outline-blue.active:focus,.btn-outline-blue.dropdown-toggle.show:focus {
@@ -18541,19 +18554,19 @@ figure {
 }
 
 .btn-outline-blue:disabled,.btn-outline-blue.disabled {
-    color: #4726e1;
+    color: #678439;
     background-color: transparent
 }
 
 .btn-outline-indigo {
-    color: #6610f2;
-    border-color: #6610f2
+    color: #678439;
+    border-color: #678439
 }
 
 .btn-outline-indigo:hover {
     color: #fff;
-    background-color: #6610f2;
-    border-color: #6610f2
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:focus+.btn-outline-indigo,.btn-outline-indigo:focus {
@@ -18562,8 +18575,8 @@ figure {
 
 .btn-check:checked+.btn-outline-indigo,.btn-check:active+.btn-outline-indigo,.btn-outline-indigo:active,.btn-outline-indigo.active,.btn-outline-indigo.dropdown-toggle.show {
     color: #fff;
-    background-color: #6610f2;
-    border-color: #6610f2
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:checked+.btn-outline-indigo:focus,.btn-check:active+.btn-outline-indigo:focus,.btn-outline-indigo:active:focus,.btn-outline-indigo.active:focus,.btn-outline-indigo.dropdown-toggle.show:focus {
@@ -18571,19 +18584,19 @@ figure {
 }
 
 .btn-outline-indigo:disabled,.btn-outline-indigo.disabled {
-    color: #6610f2;
+    color: #678439;
     background-color: transparent
 }
 
 .btn-outline-purple {
-    color: #300d81;
-    border-color: #300d81
+    color: #678439;
+    border-color: #678439
 }
 
 .btn-outline-purple:hover {
     color: #fff;
-    background-color: #300d81;
-    border-color: #300d81
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:focus+.btn-outline-purple,.btn-outline-purple:focus {
@@ -18592,8 +18605,8 @@ figure {
 
 .btn-check:checked+.btn-outline-purple,.btn-check:active+.btn-outline-purple,.btn-outline-purple:active,.btn-outline-purple.active,.btn-outline-purple.dropdown-toggle.show {
     color: #fff;
-    background-color: #300d81;
-    border-color: #300d81
+    background-color: #678439;
+    border-color: #678439
 }
 
 .btn-check:checked+.btn-outline-purple:focus,.btn-check:active+.btn-outline-purple:focus,.btn-outline-purple:active:focus,.btn-outline-purple.active:focus,.btn-outline-purple.dropdown-toggle.show:focus {
@@ -18601,7 +18614,7 @@ figure {
 }
 
 .btn-outline-purple:disabled,.btn-outline-purple.disabled {
-    color: #300d81;
+    color: #678439;
     background-color: transparent
 }
 
@@ -19178,7 +19191,7 @@ div.code-toolbar>.toolbar button {
 }
 
 div.code-toolbar>.toolbar button:hover {
-    background: #4726e1;
+    background: #678439;
     color: #fff
 }
 
@@ -19529,7 +19542,7 @@ kbd {
 }
 
 .counter .counter-value:focus,.counter .counter-value:hover {
-    color: #4726e1
+    color: #678439
 }
 
 .counter .counter-minus,.counter .counter-plus {
@@ -19546,7 +19559,7 @@ kbd {
 }
 
 .counter .counter-minus:active,.counter .counter-plus:active {
-    color: #4726e1
+    color: #678439
 }
 
 .sticky-top {
@@ -19618,7 +19631,7 @@ kbd {
 }
 
 .file-structure a:hover,.file-structure span.folder:hover {
-    color: #4726e1
+    color: #678439
 }
 
 .file-structure a[aria-expanded="true"]::before,.file-structure span.folder[aria-expanded="true"]::before {
@@ -19690,7 +19703,7 @@ kbd {
 }
 
 .noUi-horizontal .noUi-handle:hover::before {
-    background: #4726e1
+    background: #678439
 }
 
 .noUi-horizontal .noUi-handle::after {
