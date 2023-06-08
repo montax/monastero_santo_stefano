@@ -1,0 +1,109 @@
+.errore {
+    display: none;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #678439;
+    justify-content: center;
+    align-items: center;
+}
+
+#puzzle-container {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#board{
+    width: 405px;
+    height : 406px;
+    border: 4px solid #db9e11;
+    border-radius: 2%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: center;
+    background-color: white;
+    min-width: 408px;
+}
+
+#board img{
+    
+    width: 133.6px;
+    height: 133.6.7px;
+    border: 0.5px solid lightblue;
+    border-radius: 4%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#final-image {
+    margin-left: 20px;
+    border: 4px solid #db9e11;
+    border-radius: 2%;
+}
+
+#puzzle-text {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#puzzle-text button {
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: wavy;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    border-color: black;
+    width: 150px;
+    transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -moz-transition: 0.50s;
+    -o-transition: 0.50s;
+}
+
+#puzzle-text button:hover {
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: wavy;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-spacing: 5px;
+    width: 150px;
+}
+
+#pieces{
+    width: 697px;
+    height: 270px;
+    border: 4px solid #db9e11;
+    border-radius: 2%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+#pieces img{
+    width: 133px;
+    height: 133px;
+    border: 0.5px solid lightblue;
+    border-radius: 4%;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#divider1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

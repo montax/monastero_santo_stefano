@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Inter:wght@700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* css ovviamente da modificare e se necessario adattare allo stile del sito, questo è soltanto un concept.*/
+/* commenti aggiunti solo per dare un idea di ciò che è strettamente necessario, ciò che è consigliato e ciò che è opzionale.*/
+
+:root {
+  --accent-color: #0099ff6c;
+  --sourcesanspro-font: 'Source Sans Pro', sans-serif;
+  --barlow-font: 'Barlow', sans-serif;
+}
+
+* {
+  margin: 0; /* importante */
+}
+
+html, body { /* non necessario */
+  height: 100%;
+}
+
+main { /* importante */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #678439;
+}
+
+.game-quiz-container {
+  font-family: 'Barlow', sans-serif; /* font temporaneo, modifica se necessario */
+  font-weight: 900; /* non necessario, consigliato */
+  width: 40rem; /* dimensione del box del quiz, modificabile se necessario */
+  height: 30rem; /* dimensione del box del quiz, modificabile se necessario */
+
+  
+  /* Idea per lo sfondo del quiz, assolutamente non necessario, */
+  /* ma con un po' di ritocco e lavoro potrebbe migliorare l'aspetto del quiz e l'esperienza utente. */ 
+  background-image: url('./assets/blurred-DSC06055.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* IMPORTANTISSIMO nel reactive design. Non rimuovere se si decide di adottare l'idea dello sfondo*/
+  background-position: center;
+
+  display: flex; /* necessario */
+  flex-direction: column; /* necessario */
+  align-items: center; /* necessario */
+  justify-content: space-around; /* non necessario, consigliato */
+  border-radius: 30px; /* non necessario, consigliato */
+}
+
+.game-details-container {
+  width: 80%; /* necessario */
+  height: 4rem; /* non necessario, consigliato */
+  display: flex; /* necessario */
+  justify-content: space-around; /* non necessario, consigliato */
+  align-items: center;
+}
+
+.game-details-container h1 {
+  font-size: 1.2rem; /* necessario */
+}
+
+.game-question-container {
+  backdrop-filter: blur(8px) brightness(0.5); /* non necessario, consigliato se si utilizza l'idea del background */
+  -webkit-backdrop-filter: blur(8px) brightness(0.5);
+  width: 80%; /* necessario */
+  height: 8rem; /* necessario */
+  display: flex; /* necessario */
+  align-items: center; /* necessario */
+  justify-content: center; /* necessario */
+  border: 2px solid darkgray; /* non necessario, consigliato */
+  color: rgb(255, 255, 255); /* colore testo della domanda */
+  border-radius: 25px; /* non necessario, consigliato */
+}
+
+.game-question-container h1 {
+  font-size: 1.1rem; /* necessario */
+  text-align: center; /* necessario */
+  padding: 3px; /* non necessario, consigliato */
+  margin-left: 5px; /* non necessario, altamente consigliato */
+  margin-right: 5px;
+}
+
+.game-options-container {
+  width: 80%; /* necessario, modificabile se serve */
+  height: 12rem; /* non necessario, consigliato */
+  display: flex; /* necessario */
+  flex-wrap: wrap; /* necessario */
+  align-items: center; /* non necessario */
+  justify-content: space-around; /* necessario */
+}
+
+.game-options-container span {
+  margin-top: 10px; /* non necessario */
+  align-items: center; /* non necessario */
+  text-align: center; /* necessario */
+  margin-bottom: 10px; /* non necessario */
+  width: 45%; /* necessario */
+  height: 3rem; /* necessario */
+  border: 2px solid rgb(204, 204, 204); /* colore bordo risposte */
+  border-radius: 10px; /* non necessario, consigliato */
+  overflow: hidden; /* non necessario */
+  backdrop-filter: blur(2.5px) brightness(0.6); /* non necessario, consigliato se si utilizza l'idea del background */
+  -webkit-backdrop-filter: blur(2.5px) brightness(0.6);
+  transition: 0.50s; 
+  -webkit-transition: 0.50s;
+  color: rgb(255, 255, 255);
+}
+
+.game-options-container span:hover {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 3rem;
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(2.5px) brightness(2.4); /* non necessario, consigliato se si utilizza l'idea del background */
+  -webkit-backdrop-filter: blur(2.5px) brightness(2.4);
+  color: rgb(0, 0, 0); /* colore testo risposte */
+  transition: 0.50s; 
+  -webkit-transition: 0.50s;
+  -moz-transition: 0.50s;
+}
+
+
+
+.game-options-container span label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: 0.50s;
+  -webkit-transition: 0.50s;
+  -moz-transition: 0.50s;
+  -o-transition: 0.50s;
+}
+
+.game-options-container span label:hover {
+  color: rgb(28, 28, 28);
+  cursor: pointer;
+}
+
+.game-options-container input[type="radio"] {
+  position: relative;
+  display: none;
+}
+
+.game-options-container input[type=radio]:checked~.option {
+  background: var(--accent-color);
+  backdrop-filter: blur(5px) brightness(1.8); /* non necessario, consigliato se si utilizza l'idea del background */
+  -webkit-backdrop-filter: blur(5px) brightness(1.8);
+}
+
+.next-button-container {
+  margin-top: 30px;
+  width: 50%;
+  height: 3rem;
+  display: flex; /* necessario */
+  justify-content: center; /* necessario */
+}
+
+.next-button-container button {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600; /* non necessario, consigliato */
+  width: 8rem; /* non necessario, consigliato */
+  height: 2rem;
+  border-radius: 10px;
+  background: none;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(191, 191, 191);
+  cursor: pointer;
+  transition: 0.50s; 
+  -webkit-transition: 0.50s;
+  -moz-transition: 0.50s;
+  -o-transition: 0.50s;
+}
+
+.next-button-container button:hover {
+  background-color: rgb(255, 255, 255); /* non necessario, consigliato */
+  color: rgb(0, 0, 0); /* non necessario, consigliato */
+  /*box-shadow: 0px 0px 10px 0.5px var(--accent-color);*/
+  border: 2px solid rgb(39, 39, 39);; /* non necessario, consigliato */
+}
+
+
+/* MODAL PUNTEGGIO GIOCATORE */
+/**/
+/**/
+/* DA RIVEDERE */
+.modal-container {
+  display: none; /* cambiare valore da none a inherit per lavorare sul modal. */ 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.271);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: fadeIn 1.2s ease-in-out;
+  -moz-animation: fadeIn 1.2s ease-in-out;
+  animation: fadeIn 1.2s ease-in-out;
+  -o-animation: fadeIn 1.2 ease-in-out;;
+  font-family: var(--sourcesanspro-font);
+}
+/**/
+/* DA RIVEDERE TOTALMENTE*/
+.modal-content-container { 
+  height: 20rem;
+  width: 25rem;
+  background-color: rgba(255, 255, 255, 0.537);
+  border: 2px solid rgba(0, 0, 0, 0.708);
+  backdrop-filter: blur(5px) brightness(0.8);
+  -webkit-backdrop-filter: blur(5px) brightness(0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 25px;
+}
+/**/
+.modal-content-container h1 {
+  font-family: var(--barlow-font);
+  font-weight: 700;
+  font-size: 1.3rem;
+  height: 3rem;
+  color: rgb(19, 19, 19);
+  text-align: center;
+}
+/**/
+.grade-details {
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+/**/
+.grade-details p { 
+  color: rgb(0, 0, 0); 
+  text-align: center;
+  transition: 0.50s;
+  -moz-transition: 0.50s;
+  -webkit-transition: 0.50s;
+  -o-transition: 0.50s;
+}
+/**/
+.modal-button-container {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.50s;
+  -moz-transition: 0.50s;
+  -webkit-transition: 0.50s;
+  -o-transition: 0.50s;
+}
+/**/
+.modal-button-container button {
+  font-family: var(--barlow-font);
+  font-weight: 700;
+  width: 8rem;
+  height: 2.25rem;
+  backdrop-filter: blur(5px) brightness(0.8);
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.363);
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.50s;
+  -moz-transition: 0.50s;
+  -webkit-transition: 0.50s;
+  -o-transition: 0.50s;
+
+}
+/**/
+.modal-button-container button:hover {
+  background-color: rgba(29, 29, 29, 0.854);
+  color: #ffffff;
+  box-shadow: 0px 0px 10px 1px var(--accent-color);
+}
+/**/
+
+/* DA RIVEDERE */
+/* Reactive design, ho fatto del mio meglio nonostante non sia il mio forte. */
+/* magari potrebbe anche non servire, ma non si sa mai. */
+@media(min-width : 300px) and (max-width : 400px) {
+  .game-quiz-container {
+    width: 90%;
+    height: 80vh;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+
+  }
+
+  .game-details-container h1 {
+    font-size: 0.8rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .game-question-container {
+    height: 8rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+  .game-question-container h1 {
+    font-size: 0.9rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .game-options-container span {
+    width: 90%;
+    height: 2.5rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .game-options-container span label {
+    font-size: 0.8rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s; 
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .modal-content-container {
+    width: 90%;
+    height: 25rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .modal-content-container h1 {
+    font-size: 1.2rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+}
+
+/* DA RIVEDERE */
+/* Reactive design*/
+@media(min-width : 400px) and (max-width : 700px) { 
+  .game-quiz-container {
+    width: 90%; 
+    height: 80vh;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .game-details-container h1 {
+    font-size: 1.25rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .game-question-container {
+    margin-top: -50px;
+    height: 15rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .game-question-container h1 {
+    font-size: 1.2rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .next-button-container button {
+    font-size: 1rem;
+    margin-top: 30px;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .game-options-container {
+    margin-top: -50px;
+  }
+
+  .game-options-container span {
+    width: 90%;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .modal-content-container {
+    width: 90%;
+    height: 25rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+
+  .modal-content-container h1 {
+    font-size: 1.2rem;
+    transition: 0.50s; /* assolutamente consigliato */
+    -moz-transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -o-transition: 0.50s;
+  }
+}
+
+
+/* Animazione per il modal dello score*/
+@keyframes fadeIn { 
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
