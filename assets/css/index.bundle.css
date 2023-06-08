@@ -1,8 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap);
 :root {
-    --bs-blue: #678439;
-    --bs-indigo: #678439;
-    --bs-purple: #678439;
+    --bs-alpine-green: #678439;
     --bs-pink: #d63384;
     --bs-red: #d34f2d;
     --bs-orange: #f08d34;
@@ -83,6 +81,16 @@
 
     #immagini .col-6 {
         min-width: 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .carousel .tns-controls button {
+        display: none;
+    }
+    
+    #puzzle {
+        display: none;
     }
 }
 

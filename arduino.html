@@ -23,18 +23,17 @@
       <!-- secondary -->
       <ul class="navbar-nav navbar-nav-secondary order-lg-3">
         <li class="nav-item d-lg-none">
-          <a class="nav-link nav-icon" href="" role="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="nav-link nav-icon" href="" role="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="bi bi-list"></span>
           </a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a href="https://www.instagram.com/monastero_santo.stefano/" class="btn ms-2">
+          <a href="https://www.instagram.com/monastero_santo.stefano/" target="_blank" class="btn ms-2">
             <img src="./assets/images/logo/instagram.png" alt="Instagram logo">
           </a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a href="https://www.youtube.com/@MonasteroSantoStefano/featured" class="btn ms-2">
+          <a href="https://www.youtube.com/@MonasteroSantoStefano/featured" target="_blank" class="btn ms-2">
             <img src="./assets/images/logo/youtube.png" alt="YouTube logo">
           </a>
         </li>
@@ -65,25 +64,25 @@
             </a>
           </li>
           <li class="nav-item d-lg-none btn ms-2">
-            <a href="https://www.instagram.com/monastero_santo.stefano/" class="nav-link text-primary"><img src="./assets/images/logo/instagram.png" alt="Instagram logo"></a>
+            <a href="https://www.instagram.com/monastero_santo.stefano/" target="_blank" class="nav-link text-primary"><img src="./assets/images/logo/instagram.png" alt="Instagram logo"></a>
           </li>
 
           <li class="nav-item d-lg-none btn ms-2">
-            <a href="https://www.youtube.com/@MonasteroSantoStefano/featured" class="nav-link text-primary"><img src="./assets/images/logo/youtube.png" alt="YouTube logo"></a>
+            <a href="https://www.youtube.com/@MonasteroSantoStefano/featured" target="_blank" class="nav-link text-primary"><img src="./assets/images/logo/youtube.png" alt="YouTube logo"></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   
-  <!-- content -->
+  <!-- main -->
   <div class="offcanvas-wrap">
     <section class="split">
       <div class="container">
         <div class="row justify-content-between">
  
           <div class="col-lg-3 split-sidebar">
-            <!-- table of contents-->
+            <!-- sidebar -->
             <div class="sticky-top">
               <div class="toc-container">
                 <ul id="toc-nav" class="nav nav-minimal flex-column d-none d-lg-block">
@@ -126,16 +125,14 @@
             </div>          
           </div>
 
-          <!-- content -->
+          <!-- principale -->
           <div class="col-lg-9 split-content">
 
-            <!-- text -->
             <section class="pb-5 border-bottom">
               <h3>Obiettivo:</h3>
               <p class="lead text-secondary">Questo progetto svolge il compito di rilevare due fattori ambientali: temperatura ed umidità. Misurazioni che verranno svolte lungo il tragitto, a partire dal monastero Santo Stefano di Collebeato alla stella di Gussago, ovvero la Via delle Sorelle.</p>
             </section>
 
-            <!-- component with code -->
             <section class="pb-5 border-bottom">
               <h3>Codice:</h3>
               <div class="card bg-opaque-white">
@@ -206,7 +203,7 @@
                   <div class="row">
                     <div class="col-4" style="min-width: 300px;">
                       <div class="carousel carousel-visible carousel-steps">
-                        <div data-carousel='{"controls": false, "item" : 1, "nav": false, "loop" : false, "mouseDrag" : true, "gutter": 40}'>
+                        <div data-carousel='{"controls": true, "item" : 1, "nav": false, "loop" : false, "mouseDrag" : true, "gutter": 40}'>
                           <div>
                             <p class="text-secondary fs-lg">Collegare il sensore DHT11 alla breadboard, con i vari cavi Jumper, utilizzati per il collegamento ad Arduino UNO, e resistenza da 10kΩ.</p>
                           </div>
@@ -242,10 +239,9 @@
     </section>
   </div>
 
-  <!-- table of contents - mobile-->
+  <!-- sidebar - mobile-->
   <div class="position-fixed bottom-0 end-0 p-2 level-1">
-    <button class="btn btn-white btn-icon d-lg-none rounded-pill shadow" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <button class="btn btn-white btn-icon d-lg-none rounded-pill shadow" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
       <i class="bi bi-justify-right fs-4"></i>
     </button>
   </div>
